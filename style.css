@@ -1,0 +1,37 @@
+body {
+	
+	margin: 0;
+    text-align: center;
+}
+ .gallery {
+    text-align: center;
+ 	  width: 600px;
+    margin: 0 auto;
+}
+
+
+ 
+ .photos {
+ 	 margin: 0 auto;
+ 	 position: relative;
+ 	 height:160px;
+ }
+  .gallery .photos img {
+         width: 100%;
+         position: absolute; 
+         left: 0;
+         top: 0;
+         width: 0;
+         transition: 0.3s;
+         
+  }
+ .gallery .photos img.showed {
+  	width: 100%;
+
+  }
+ .buttons input {
+ 	margin-top: 170px;
+ 	
+ }
+
+
