@@ -2,6 +2,7 @@
   $.fn.slider = function(settings) {
   	
   	var options = $.extend({
+  		
 
   		images: ' ',
   		buttonNext: ' ',
@@ -13,25 +14,25 @@
   	console.log(options);
     
      
-  	this.each(function(){
+   return this.each(function(){
   		
          
   		 this.images = $(options.images);
-  		 var slider = this;
+  		
          var i = 0;
          var isRun = false;
          console.log(this);
         
         this.prev = function() {
          
-          alert("1");
+         alert("1");
          if(isRun){
          	return;
          } 
 
          isRun = true; 
 
-      slider.images.eq(i).css({
+     options.images.eq(i).css({
         	left: 0,
         	top: 0
         }).animate({
@@ -43,7 +44,7 @@
         i = slider.images.length - 1;
        }
        
-       slider.images.eq(i) .css({
+      options.images.eq(i) .css({
             bottom: 0,
             right: 0,
             top: 'auto',
@@ -56,14 +57,12 @@
     };
 
 
-     document.querySelector(slider.buttonPrev).onclick = slider.prev;
+     document.querySelector(options.buttonPrev).onclick = slider.prev;
     
-      if(slider.auto) {
-      setInterval(slider.prev, slider.rate);
-    }
+    
   	})
-     console.log( document.querySelector(slider.buttonPrev));
-  	return this;
+   
+ 
 
   };
 })(jQuery); 
